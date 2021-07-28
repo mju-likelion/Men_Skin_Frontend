@@ -111,10 +111,10 @@ const HomePresenter = () => (
        <Find_f className="Find_f" alt="find_foundation_Button" src="img/Find_foundation.png"/>
        <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png"/>
        <Board className="Board" alt="Board _Button" src="img/notic_board.png"/>
-
-       
-
      </div>
+     <biv className="main_rank">
+        
+     </biv>
  
    </Section>
  );
