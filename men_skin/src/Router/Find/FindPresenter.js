@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Section = styled.body`
   background-color: #252525;
-  width: 1950px;
-  height: 1080px;
+  width: 1920px;
+  height: 100%;
   margin: 0;
   padding: 0;
   position:absolute; 
@@ -39,6 +39,41 @@ const Button1 = styled.div`
 
   background: #FFFFFF;
   border-radius: 50px;
+
+  position: absolute;
+
+
+  font-family: Georgia;
+
+  font-size: 40px;
+  line-height: 78px;
+  text-align: center;
+
+  color: #000000;
+
+`;
+
+const Button2 = styled.div`
+  position: absolute;
+  width: 600px;
+  height: 110px;
+  left: 1120px;
+  top: 802px;
+
+  background: #FFFFFF;
+  border-radius: 50px;
+
+  position: absolute;
+
+
+  font-family: Georgia;
+
+  font-size: 40px;
+  line-height: 78px;
+  text-align: center;
+
+  color: #000000;
+
 `;
 
 const Explanation = styled.img`
@@ -67,7 +102,11 @@ const FindPresenter = () => (
      </Link>
      <Upload src="img/Upload.png" />
      <Line src="img/Find_Line.png"/>
-     <Button1/>
+     <Button1>upload image</Button1>
+     <Link to="./FindDetail">
+      <Button2>Result Page</Button2>
+     </Link>
+     
      <Explanation src="img/Explanation.png"/>
      <Bright src="img/Brightpart.png"/>
      <Darkes src="img/Darkestpart.png"/>

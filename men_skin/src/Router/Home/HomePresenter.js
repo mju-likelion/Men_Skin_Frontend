@@ -105,9 +105,14 @@ const HomePresenter = () => (
      <div className="main_image"/>
       <img className="main_image" alt="main_image" src="img/main_image.jpg" height="615" width="1920" />
       <Quick_Menu>Quick menu</Quick_Menu>
-      <Login className="LoginButton">LOGIN</Login>
+      <Link to="./Login">
+        <Login className="LoginButton">LOGIN</Login>
+      </Link>
       <Line alt="line" src="img/main_Line.png"  />
-      <Sing_up className="LoginButton">SING UP</Sing_up>
+      <Link to="./Singup">
+        <Sing_up className="LoginButton">SING UP</Sing_up>
+      </Link>
+      
       <Link to="./Find">
         <Find_f className="Find_f" alt="find_foundation_Button" src="img/Find_foundation.png"/>
       </Link>

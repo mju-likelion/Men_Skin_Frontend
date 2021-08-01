@@ -1,10 +1,10 @@
 import React from "react";
 
-import LoginPresenter from "./LoginPresenter";
+import SingupPresenter from "./SingupPresenter";
 
 export default class extends React.Component {
 
   render() {
-    return <LoginPresenter/>;
+    return <SingupPresenter/>;
   }
 }

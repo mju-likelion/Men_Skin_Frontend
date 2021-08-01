@@ -1,10 +1,10 @@
 import React from "react";
 
-import LoginPresenter from "./LoginPresenter";
+import FindDetailPresenter from "./FindDetailPresenter";
 
 export default class extends React.Component {
 
   render() {
-    return <LoginPresenter/>;
+    return <FindDetailPresenter/>;
   }
 }
