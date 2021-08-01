@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom' 
 import styled from "styled-components";
 
 const Section = styled.body`
   background-color: #252525;
   width: 1920px;
-  height: 2160px;
+  height: 1080px;
   margin: 0;
   padding: 0;
   position:absolute; 
@@ -76,14 +77,14 @@ const Find_f = styled.img`
   width: 137px;
   height: 117px;
   left: 1738px;
-  top: 324px;
+  top: 250px;
 `; 
 const Rank = styled.img`
   position: absolute;
   width: 137px;
   height: 117px;
   left: 1739px;
-  top: 529px;
+  top: 460px;
 
 `; 
 const Board = styled.img`
@@ -91,7 +92,7 @@ const Board = styled.img`
   width: 137px;
   height: 117px;
   left: 1738px;
-  top: 730px;
+  top: 670px;
 
 `; 
 
@@ -100,24 +101,22 @@ const Board = styled.img`
 
 const HomePresenter = () => (
    <Section>
-
      <img className="Logo_image" alt="Logo_image" src="img/logo.png"  width="205" height="198"/>
-     <div className="main_image">
-       <img className="main_image" alt="main_image" src="img/main_image.jpg" height="615" width="1920" />
-       <Quick_Menu>Quick menu</Quick_Menu>
-       <Login className="LoginButton">LOGIN</Login>
-       <Line alt="line" src="img/main_Line.png"  />
-       <Sing_up className="LoginButton">SING UP</Sing_up>
-       <Find_f className="Find_f" alt="find_foundation_Button" src="img/Find_foundation.png"/>
-       <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png"/>
-       <Board className="Board" alt="Board _Button" src="img/notic_board.png"/>
-     </div>
-     <biv className="main_rank">
-        
-     </biv>
+     <div className="main_image"/>
+      <img className="main_image" alt="main_image" src="img/main_image.jpg" height="615" width="1920" />
+      <Quick_Menu>Quick menu</Quick_Menu>
+      <Login className="LoginButton">LOGIN</Login>
+      <Line alt="line" src="img/main_Line.png"  />
+      <Sing_up className="LoginButton">SING UP</Sing_up>
+      <Link to="./Find">
+        <Find_f className="Find_f" alt="find_foundation_Button" src="img/Find_foundation.png"/>
+      </Link>
+      <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png"/>
+      <Board className="Board" alt="Board _Button" src="img/notic_board.png"/>
+
  
    </Section>
- );
+  );
   
   export default HomePresenter;
   
