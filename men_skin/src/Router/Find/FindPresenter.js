@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { PropTypes } from "prop-types";
 
 const Section = styled.body`
   background-color: #252525;
@@ -93,26 +94,72 @@ const Darkes = styled.img`
   top: 407px;
   position: absolute;
 `;
+const Plus = styled.p`
+  display: inline-block;
+  font-size: 100px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+`;
 
-const FindPresenter = () => (
-   <Section>
+const FindPresenter = (props) => (
+  <Section>
 
-     <Link to="/">
-      <Logo className="Logo_image" alt="Logo_image" src="img/logo.png"  width="205" height="198" />
-     </Link>
-     <Upload src="img/Upload.png" />
-     <Line src="img/Find_Line.png"/>
-     <Button1>upload image</Button1>
-     <Link to="./FindDetail">
-      <Button2>Result Page</Button2>
-     </Link>
-     
-     <Explanation src="img/Explanation.png"/>
-     <Bright src="img/Brightpart.png"/>
-     <Darkes src="img/Darkestpart.png"/>
-     
- 
-   </Section>
+    <Link to="/">
+      <Logo className="Logo_image" alt="Logo_image" src="img/logo.png" width="205" height="198" />
+    </Link>
+    
+    {props.previewURL !== "" ? (
+      <Upload
+      src= {props.previewURL}
+      alt="nonUpload"
+      style={{ width: "500px", height: "500px", zIndex: 2 }}
+      id="img"
+    ></Upload>
+
+    ):(
+      <Upload
+      src= "img/Upload.png"
+      alt="Upload"
+      style={{ width: "500px", height: "500px", zIndex: 2 }}
+      id="img"
+    ></Upload>
+    )}
+    
+    <Line src="img/Find_Line.png" />
+    <Button1>upload image
+      <input
+        type="file"
+        accept="image/jpg,impge/png,image/jpeg,image/gif"
+        name="upload_img"
+        onChange={props.handleFileOnChange}
+        style={{
+          width: "600px", height: "110px",
+          position: "absolute", left: "20px", top: "0"
+        }}
+        id="input-file"
+      />
+
+    </Button1>
+    <Link to="./FindDetail">
+      <Button2 >Result Page</Button2>
+    </Link>
+
+    <Explanation src="img/Explanation.png" />
+    <Bright src="img/Brightpart.png" />
+    <Darkes src="img/Darkestpart.png" />
+
+
+  </Section>
 );
+
+FindPresenter.propTypes = {
+  file: PropTypes.string,
+  handleFileOnChange: PropTypes.func,
+  previewURL: PropTypes.string,
+};
 
 export default FindPresenter;
