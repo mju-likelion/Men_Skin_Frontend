@@ -119,14 +119,31 @@ letter-spacing: -0.02em;
 color: #7C7C7C;
 `;
 
+const Loginbutton = styled.div`
+position: absolute;
+width: 412px;
+height: 50px;
+left: 1157px;
+top: 650px;
+
+background: #B4B4B4;
+border-radius: 33px;
+
+font-size: 30px;
+line-height: 29px;
+text-align: center;
+line-height: 50px;
+
+color: #000000;
+
+`;
 
 
 const LoginPresenter = () => (
     
     <Section>
         <Link to="./">
-            <BigLogo src="img/BigLogo.png"/>
-            
+            <BigLogo src="img/BigLogo.png"/>            
         </Link>
         <Line/>
         <Box/>
@@ -156,6 +173,8 @@ const LoginPresenter = () => (
                 // required
             />
             </InputDiv_pass>
+            <Loginbutton>로그인</Loginbutton>
+            
 
             
             
