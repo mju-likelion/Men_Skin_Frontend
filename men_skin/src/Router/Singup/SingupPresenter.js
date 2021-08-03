@@ -173,7 +173,7 @@ const Submit = styled.div`
   border-radius: 33px;
 
   font-size: 25px;
-  line-height: 50px;
+  line-height: 29px;
   text-align: center;
 `;
 
