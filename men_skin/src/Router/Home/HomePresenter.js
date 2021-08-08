@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from 'react-router-dom' 
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
+
 
 const Section = styled.body`
   background-color: #252525;
@@ -78,50 +79,153 @@ const Find_f = styled.img`
   height: 117px;
   left: 1738px;
   top: 250px;
-`; 
+`;
 const Rank = styled.img`
   position: absolute;
   width: 137px;
   height: 117px;
   left: 1739px;
   top: 460px;
+`;
 
-`; 
 const Board = styled.img`
   position: absolute;
   width: 137px;
   height: 117px;
   left: 1738px;
   top: 670px;
+`;
 
-`; 
+const ContainerProduct = styled.div`
+  position: relative;
+  width: 915px;
+  height: 490px;
+  overflow: hidden;
+  margin: 0 auto;
+`;
 
+const ContainerBody = styled.div`
+  width: 100%;
+  height: 1230px;
+  margin: 0;
+  padding: 0;
+  background: #252525;
+`;
 
+const TextBox = styled.p`
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Georgia;
+  font-size: 28px;
+`;
 
+const ImgBox = styled.img`
+  width: 915px;                          
+  height: 490px;
+  object-fit: cover;
+  opacity: 0.6;
+`;
+
+const Effect = styled.figure`
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+
+  &:hover{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+`;
 
 const HomePresenter = () => (
-   <Section>
-     <img className="Logo_image" alt="Logo_image" src="img/logo.png"  width="205" height="198"/>
-     <div className="main_image"/>
-      <img className="main_image" alt="main_image" src="img/main_image.jpg" height="615" width="1920" />
-      <Quick_Menu>Quick menu</Quick_Menu>
-      <Link to="./Login">
-        <Login className="LoginButton">LOGIN</Login>
-      </Link>
-      <Line alt="line" src="img/main_Line.png"  />
-      <Link to="./Singup">
-        <Sing_up className="LoginButton">SING UP</Sing_up>
-      </Link>
-      
-      <Link to="./Find">
-        <Find_f className="Find_f" alt="find_foundation_Button" src="img/Find_foundation.png"/>
-      </Link>
-      <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png"/>
-      <Board className="Board" alt="Board _Button" src="img/notic_board.png"/>
+  <Section>
+    <img className="Logo_image" alt="Logo_image" src="img/logo.png" width="205" height="198" />
+    <div className="main_image" />
+    <img className="main_image" alt="main_image" src="img/main_image.jpg" height="615" width="1920"></img>
+    <Quick_Menu>Quick menu</Quick_Menu>
+    <Link to="./Login">
+      <Login className="LoginButton">LOGIN</Login>
+    </Link>
+    <Line alt="line" src="img/main_Line.png" />
+    <Link to="./Singup">
+      <Sing_up className="LoginButton">SING UP</Sing_up>
+    </Link>
 
- 
-   </Section>
-  );
-  
-  export default HomePresenter;
-  
+    <Link to="./Find">
+      <Find_f className="Find_f" alt="find_foundation_Button" src="img/Find_foundation.png" />
+    </Link>
+    <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png" />
+    <Board className="Board" alt="Board _Button" src="img/notic_board.png" />
+
+    <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png" />
+
+    <ContainerBody>
+      <ContainerProduct className="container_product"
+        style={{
+          float: "left",
+          left: "29px",
+          top: "183px",
+          background: "#c4c4c4"
+        }}>
+        <Link to="./Total">
+          <Effect className="Effect" style={{ width: "100%" }}>
+            <ImgBox className="ImgBox" src="img/skin_care.jpg" />
+          </Effect>
+        </Link>
+        <TextBox className="TextBox">skin care</TextBox>
+      </ContainerProduct>
+
+      <ContainerProduct className="container_product"
+        style={{
+          float: "right",
+          right: "29px",
+          top: "183px",
+          background: "#252525"
+        }}>
+        <Link to="./Total">
+          <Effect className="Effect" style={{ width: "100%" }}>
+            <ImgBox className="ImgBox" src="img/perfume.jpg" />
+          </Effect>
+        </Link>
+        <TextBox className="TextBox" style={{ color: "white" }}>perfume</TextBox>
+      </ContainerProduct>
+
+      <ContainerProduct className="container_product"
+        style={{
+          float: "left",
+          left: "29px",
+          top: "216px",
+          background: "#252525"
+        }}>
+        <Link to="./Total">
+          <Effect className="Effect" style={{ width: "100%" }}>
+            <ImgBox className="ImgBox" src="img/hair.jpg" />
+          </Effect>
+        </Link>
+        <TextBox className="TextBox" style={{ color: "white" }}>hair</TextBox>
+      </ContainerProduct>
+
+      <ContainerProduct className="container_product"
+        style={{
+          float: "right",
+          right: "29px",
+          top: "216px",
+          background: "#c4c4c4"
+        }}>
+        <Link to="./Total">
+          <Effect className="Effect" style={{ width: "100%" }}>
+            <ImgBox className="ImgBox" src="img/shave.jpg" />
+          </Effect>
+        </Link>
+        <TextBox className="TextBox">shave</TextBox>
+      </ContainerProduct>
+
+    </ContainerBody>
+  </Section >
+);
+
+export default HomePresenter;
