@@ -133,6 +133,12 @@ export class TestPresenter extends React.Component {
 
     }
   };
+  clickEvent = (color) => {
+
+    alert("버튼을 눌렀습니다.");
+
+
+  };
 
 
 
@@ -143,8 +149,8 @@ export class TestPresenter extends React.Component {
     return colors.map((color, id) => {
       
       return (
-        <button onClick={color}>
-          <div
+        
+          <button 
             key={id}
             style={{
               backgroundColor: color,
@@ -152,8 +158,9 @@ export class TestPresenter extends React.Component {
               height: 100,
               marginLeft: 10
             }}
-          ></div>
-        </button>
+            
+          ></button>
+        
         
 
       );
@@ -224,16 +231,18 @@ export class TestPresenter extends React.Component {
           <div></div>
 
         ) : (
-          <Link to="./FindDetail">
+          <>
             {/* <Button2 >Color extraction</Button2> */}
-            <div style={{  marginTop: 600, display: "flex", marginLeft: 1100 }}>{this.renderSwatches()}</div>
-            <div></div>
-          </Link>
+            <div style={{  marginTop: 600, display: "flex", marginLeft: 1100 }}>
+            {this.renderSwatches()}
+            </div>
+          </>
         )}
         <div>
           <ColorExtractor rgd getColors={this.getColors}>
             <img src={this.state.previewURL} style={IMAGE_STYLES} />
           </ColorExtractor>
+          <div style={{color: "white"}}>{this.clickEvent}</div>
 
          
 
