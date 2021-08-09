@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
-const IMAGE_STYLES = { width: 700, height: 500 ,display: "none"};
+const IMAGE_STYLES = { width: 700, height: 500, display: "none" };
 
 const Section = styled.body`
   background-color: #252525;
@@ -100,7 +100,9 @@ export class TestPresenter extends React.Component {
     file: "",
     previewURL: "",
     colors: [],
-    save: []
+    save: [],
+    result: "",
+    rgbChange: ""
 
   };
 
@@ -133,42 +135,70 @@ export class TestPresenter extends React.Component {
 
     }
   };
-  clickEvent = (color) => {
+  clickEvent = (color,e) => {
+    const rgbChange = this.hexToRgb(color);
 
-    alert("버튼을 눌렀습니다.");
+
+    
+
+    if(rgbChange.R <= 229 && rgbChange.G <= 179 && rgbChange.B <= 135){
+
+      alert("24호 입니다.")
+    }
+    else if(236<=rgbChange.R <= 242 && 193<=rgbChange.G <= 204 && 151<= rgbChange.B <= 167){
+      alert("23호 입니다.")
+    }
+    else if(243<=rgbChange.R <= 250 && 205<=rgbChange.G <= 212 && 168<= rgbChange.B <= 182){
+      alert("21호 입니다.")
+    }
+    else if(0<=rgbChange.R <= 255 && 0<=rgbChange.G <= 255 && 0<= rgbChange.B <= 255){
+      alert("13호 입니다."); 
+    }
 
 
+  };
+
+  hexToRgb = (hex) => {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      R: parseInt(result[1], 16),
+      G: parseInt(result[2], 16),
+      B: parseInt(result[3], 16)
+    } : null;
+    
   };
 
 
 
   renderSwatches = () => {
     const { colors } = this.state;
-    
+
 
     return colors.map((color, id) => {
-      
+      console.log(id)
+
       return (
-        
-          <button 
-            key={id}
-            style={{
-              backgroundColor: color,
-              width: 100,
-              height: 100,
-              marginLeft: 10
-            }}
+
+        <button onClick= {(e) => this.clickEvent(color, e)}
+          key={id}
+          style={{
+            backgroundColor: color,
+            width: 100,
+            height: 100,
+            marginLeft: 10,
             
-          ></button>
-        
-        
+          }}
+
+        ></button>
+
+
 
       );
-      
+
     });
   };
 
- 
+
 
 
   getColors = colors =>
@@ -177,6 +207,8 @@ export class TestPresenter extends React.Component {
   render() {
     return (
       <Section>
+
+        
 
 
 
@@ -223,6 +255,8 @@ export class TestPresenter extends React.Component {
             alt="Upload"
             style={{ width: "595px", height: "504px" }}
             id="img"
+            
+            
           ></Upload>
         )}
 
@@ -232,22 +266,24 @@ export class TestPresenter extends React.Component {
 
         ) : (
           <>
+
             {/* <Button2 >Color extraction</Button2> */}
-            <div style={{  marginTop: 600, display: "flex", marginLeft: 1100 }}>
-            {this.renderSwatches()}
-            </div>
+            <div style={{ marginTop: 600, display: "flex", marginLeft: 1100 }}>{this.renderSwatches()}</div>
           </>
         )}
         <div>
-          <ColorExtractor rgd getColors={this.getColors}>
+          <ColorExtractor  getColors={this.getColors}>
             <img src={this.state.previewURL} style={IMAGE_STYLES} />
           </ColorExtractor>
-          <div style={{color: "white"}}>{this.clickEvent}</div>
+          <div style={{ color: "white" }}>{this.clickEvent}</div>
+          <div>{this.colors}</div>
+          
 
-         
+
 
 
         </div>
+        
 
 
 
