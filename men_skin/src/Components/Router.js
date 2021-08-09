@@ -8,6 +8,7 @@ import Singup from "../Router/Singup";
 import FindDetail from "../Router/FindDetail";
 import Total from "../Router/Total";
 import TotalDetail from "../Router/TotalDetail";
+import Test from "../Router/Test";
 
 
 export default () => (
@@ -21,6 +22,7 @@ export default () => (
       <Route path="/FindDetail" exact component={FindDetail} />
       <Route path="/Total" exact component={Total} />
       <Route path="/TotalDetail" exact component={TotalDetail} />
+      <Route path="/Test" exact component={Test} />
     </Switch>
   </Router>
 );
