@@ -2,13 +2,13 @@ import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "../Router/Home";
-import Find from "../Router/Find";
+
 import Login from "../Router/Login";
 import Singup from "../Router/Singup";
 import FindDetail from "../Router/FindDetail";
 import Total from "../Router/Total";
 import TotalDetail from "../Router/TotalDetail";
-import Test from "../Router/Test";
+import Find from "../Router/Test";
 
 
 export default () => (
@@ -21,8 +21,8 @@ export default () => (
       <Route path="/Singup" exact component={Singup} />
       <Route path="/FindDetail" exact component={FindDetail} />
       <Route path="/Total" exact component={Total} />
-      <Route path="/TotalDetail" exact component={TotalDetail} />
-      <Route path="/Test" exact component={Test} />
+      <Route path="/TotalDetail/:result" exact component={TotalDetail} />
+      <Route path="/Test" exact component={Find} />
     </Switch>
   </Router>
 );

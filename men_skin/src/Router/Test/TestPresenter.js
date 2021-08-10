@@ -2,6 +2,9 @@ import React from "react";
 import { ColorExtractor } from "react-color-extractor";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 
 const IMAGE_STYLES = { width: 700, height: 500, display: "none" };
@@ -58,7 +61,7 @@ const Button2 = styled.div`
   width: 600px;
   height: 110px;
   left: 1120px;
-  top: 400px;
+  top: 802px;
 
   background: #FFFFFF;
   border-radius: 50px;
@@ -101,10 +104,16 @@ export class TestPresenter extends React.Component {
     previewURL: "",
     colors: [],
     save: [],
-    result: "",
+    result: 0,
     rgbChange: ""
 
   };
+
+  componentDidMount() {
+    AOS.init({
+      duration: "",
+    });
+  }
 
   handleFileOnChange = (event) => {
     if (this.state.previewURL !== "") {
@@ -139,20 +148,39 @@ export class TestPresenter extends React.Component {
     const rgbChange = this.hexToRgb(color);
 
 
+
     
 
-    if(rgbChange.R <= 229 && rgbChange.G <= 179 && rgbChange.B <= 135){
+    if(0< rgbChange.R &&rgbChange.R <= 229){
+      this.setState({
+        result: 24
 
-      alert("24호 입니다.")
+      });
+      alert("고객님의 피부 타입 진단을 완료했습니다. 아래 result 버튼을 눌러주세요!")
     }
-    else if(236<=rgbChange.R <= 242 && 193<=rgbChange.G <= 204 && 151<= rgbChange.B <= 167){
-      alert("23호 입니다.")
+    else if(229< rgbChange.R && rgbChange.R <= 236 ){
+      this.setState({
+        result: 23
+
+      });
+      alert("고객님의 피부 타입 진단을 완료했습니다. 아래 result 버튼을 눌러주세요!")
     }
-    else if(243<=rgbChange.R <= 250 && 205<=rgbChange.G <= 212 && 168<= rgbChange.B <= 182){
-      alert("21호 입니다.")
+    else if(236 < rgbChange.R && rgbChange.R <= 243 ){
+      this.setState({
+        result: 21
+
+      });
+      alert("고객님의 피부 타입 진단을 완료했습니다. 아래 result 버튼을 눌러주세요!")
     }
-    else if(0<=rgbChange.R <= 255 && 0<=rgbChange.G <= 255 && 0<= rgbChange.B <= 255){
-      alert("13호 입니다."); 
+    else if(243< rgbChange.R && rgbChange.R <= 255 ){
+      this.setState({
+        result: 13
+
+      });
+      alert("고객님의 피부 타입 진단을 완료했습니다. 아래 result 버튼을 눌러주세요!")
+
+
+
     }
 
 
@@ -179,7 +207,7 @@ export class TestPresenter extends React.Component {
 
       return (
 
-        <button onClick= {(e) => this.clickEvent(color, e)}
+        <button data-aos="fade-left" onClick= {(e) => this.clickEvent(color, e)}
           key={id}
           style={{
             backgroundColor: color,
@@ -276,7 +304,25 @@ export class TestPresenter extends React.Component {
             <img src={this.state.previewURL} style={IMAGE_STYLES} />
           </ColorExtractor>
           <div style={{ color: "white" }}>{this.clickEvent}</div>
-          <div>{this.colors}</div>
+          
+          {this.state.result !== 0 ? (
+          <Link to={`/FindDetail/${this.state.result}`}>
+            <Button2
+            //색상추출되면 버튼 활성화 시켜이이잇!
+ 
+          >result</Button2>
+          </Link>
+
+
+        ) : (
+          <Button2
+            //색상추출 아직이면 버튼 비활성화 시켜이이잇!
+            style={{ display:"none" }}
+
+            
+            
+          ></Button2>
+        )}
           
 
 

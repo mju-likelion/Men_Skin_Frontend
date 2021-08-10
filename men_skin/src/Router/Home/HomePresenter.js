@@ -141,6 +141,13 @@ const Effect = styled.figure`
   }
 `;
 
+const Scroll = styled.div`
+
+width: 64;                          
+height: 64;
+
+`;
+
 const HomePresenter = () => (
   <Section>
     <img className="Logo_image" alt="Logo_image" src="img/logo.png" width="205" height="198" />
@@ -154,6 +161,11 @@ const HomePresenter = () => (
     <Link to="./Singup">
       <Sing_up className="LoginButton">SING UP</Sing_up>
     </Link>
+    <Scroll ddata-aos="fade-up" >
+      <img src="img/arrow.png"/>
+    </Scroll>
+
+    
 
     <Link to="./Find">
       <Find_f className="Find_f" alt="find_foundation_Button" src="img/Find_foundation.png" />
@@ -163,7 +175,7 @@ const HomePresenter = () => (
 
     <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png" />
 
-    <ContainerBody>
+    <ContainerBody data-aos="fade-up" data-aos-duration="2500">
       <ContainerProduct className="container_product"
         style={{
           float: "left",
