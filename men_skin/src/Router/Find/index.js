@@ -1,3 +1,2 @@
-import FindContainer from "./FindContainer";
-
-export default FindContainer;
+import {FindPresenter} from "./FindPresenter";
+export default FindPresenter;
