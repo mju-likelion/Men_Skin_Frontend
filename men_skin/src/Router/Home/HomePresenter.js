@@ -161,19 +161,20 @@ const HomePresenter = () => (
     <Link to="./Singup">
       <Sing_up className="LoginButton">SING UP</Sing_up>
     </Link>
-    <Scroll ddata-aos="fade-up" >
-      <img src="img/arrow.png"/>
+    <Scroll ddata-aos="fade-up" data-aos-duration="2500" >
+      <img src="img/arrow.png" />
     </Scroll>
 
-    
+
 
     <Link to="./Find">
       <Find_f className="Find_f" alt="find_foundation_Button" src="img/Find_foundation.png" />
     </Link>
-    <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png" />
+    <Link to="./recommend">
+      <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png" />
+    </Link>
     <Board className="Board" alt="Board _Button" src="img/notic_board.png" />
 
-    <Rank className="Rank" alt="Rank_Button" src="img/cosmetics_rank.png" />
 
     <ContainerBody data-aos="fade-up" data-aos-duration="2500">
       <ContainerProduct className="container_product"
@@ -183,7 +184,7 @@ const HomePresenter = () => (
           top: "183px",
           background: "#c4c4c4"
         }}>
-        <Link to="./Total">
+        <Link to="./TotalSkin">
           <Effect className="Effect" style={{ width: "100%" }}>
             <ImgBox className="ImgBox" src="img/skin_care.jpg" />
           </Effect>
@@ -198,12 +199,12 @@ const HomePresenter = () => (
           top: "183px",
           background: "#252525"
         }}>
-        <Link to="./Total">
+        <Link to="./TotalSun">
           <Effect className="Effect" style={{ width: "100%" }}>
-            <ImgBox className="ImgBox" src="img/perfume.jpg" />
+            <ImgBox className="ImgBox" src="img/suncare.jpg" />
           </Effect>
         </Link>
-        <TextBox className="TextBox" style={{ color: "white" }}>perfume</TextBox>
+        <TextBox className="TextBox" style={{ color: "white" }}>sun care</TextBox>
       </ContainerProduct>
 
       <ContainerProduct className="container_product"
@@ -213,12 +214,12 @@ const HomePresenter = () => (
           top: "216px",
           background: "#252525"
         }}>
-        <Link to="./Total">
+        <Link to="./TotalPerfume">
           <Effect className="Effect" style={{ width: "100%" }}>
-            <ImgBox className="ImgBox" src="img/hair.jpg" />
+            <ImgBox className="ImgBox" src="img/perfume.jpg" />
           </Effect>
         </Link>
-        <TextBox className="TextBox" style={{ color: "white" }}>hair</TextBox>
+        <TextBox className="TextBox" style={{ color: "white" }}>perfume</TextBox>
       </ContainerProduct>
 
       <ContainerProduct className="container_product"
@@ -228,14 +229,13 @@ const HomePresenter = () => (
           top: "216px",
           background: "#c4c4c4"
         }}>
-        <Link to="./Total">
+        <Link to="./TotalCosmetic">
           <Effect className="Effect" style={{ width: "100%" }}>
-            <ImgBox className="ImgBox" src="img/shave.jpg" />
+            <ImgBox className="ImgBox" src="img/cosmetic.jpg" />
           </Effect>
         </Link>
-        <TextBox className="TextBox">shave</TextBox>
+        <TextBox className="TextBox">cosmetic</TextBox>
       </ContainerProduct>
-
     </ContainerBody>
   </Section >
 );
