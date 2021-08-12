@@ -3,7 +3,7 @@ import {
   AUTH_LOGIN,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
-} from "/ActionTypes";
+} from "./ActionsTypes";
 //thunk
 
 const serverURL = process.env.REACT_APP_API_URL;
