@@ -1,15 +1,14 @@
 import axios from "axios";
 import {
-
+  AUTH_REGISTER,
+  AUTH_REGISTER_SUCCESS,
+  AUTH_REGISTER_FAILURE,
   AUTH_LOGIN,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
-<<<<<<< HEAD
-} from "/ActionsTypes";
-=======
+
 } from "./ActionsTypes";
->>>>>>> ad844f9e325297a5b9a79f22769f5f2e0e1daffb
-//thunk
+
 
 const serverURL = process.env.REACT_APP_API_URL;
 
@@ -28,7 +27,7 @@ export function registerRequest(id, password, birth, email, zip, address) {
       })
       .then((response) => {
         if (response.status === 200) {
-          // SUCCEED
+          // SUCCEEDc
           // console.log(response.data);
           dispatch(registerSuccess(id));
         } else {
@@ -69,6 +68,26 @@ export function loginRequest(id, password) {
     );
   };
 }
+
+export function register() {
+  return {
+    type: AUTH_REGISTER,
+  };
+}
+
+export function registerSuccess() {
+  return {
+    type: AUTH_REGISTER_SUCCESS,
+  };
+}
+
+export function registerFailure(error) {
+  return {
+    type: AUTH_REGISTER_FAILURE,
+    error,
+  };
+}
+
 
 
 export function login() {
