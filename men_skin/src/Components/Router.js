@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Redirect,Switch } from "react-router-dom";
 
 import Home from "../Router/Home";
 
@@ -34,6 +34,7 @@ export default () => (
       <Route path="/Content" exact component={Content} />
       <Route path="/Board" exact component={Board} />
       <Route path="/Write" exact component={Write} />
+      <Redirect from="*" to="/" />
 
     </Switch>
   </Router>
