@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Section = styled.body`
   background-color: #252525;
   width: 1920px;
-  height: 1080px;
+  height: auto;
   margin: 0;
   padding: 0;
   position:absolute; 

@@ -58,11 +58,14 @@ background: #FFFFFF;
 
 `;
 
-const FindDetailPresenter = () => (
+const FindDetailPresenter = (props) => (
     <Section>
         <Title>Foundation recommended by men's skin</Title>
-        <Content>당신의 피부톤에 맞는 파운데이션은 21호 이며 자세한 사항은 아래와 같습니다.</Content>
+        <Content>당신의 피부톤에 맞는 파운데이션은 {props.numresult}호 이며 자세한 사항은 아래와 같습니다.</Content>
         {/* 호수는 Find에서 추출되는 값에 따라 바뀔 예정임 */}
+        {props.Template}
+        {console.log(props)}
+        <div>{props.numresult}</div>
         <Scripts>피부에 알맞는 파운데이션을 사용하여 맑은 피부를 표현해 보세요</Scripts>
     </Section>
 
