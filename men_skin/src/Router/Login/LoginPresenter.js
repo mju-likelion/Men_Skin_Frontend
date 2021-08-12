@@ -139,7 +139,7 @@ color: #000000;
 `;
 
 
-const LoginPresenter = () => (
+const LoginPresenter = (props) => (
     
     <Section>
         <Link to="./">

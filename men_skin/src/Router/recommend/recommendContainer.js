@@ -1,6 +1,6 @@
 import React from "react";
 
-import RecommendPresenter from "./RecommendPresenter";
+import RecommendPresenter from "./recommendPresenter";
 
 export default class extends React.Component {
 
