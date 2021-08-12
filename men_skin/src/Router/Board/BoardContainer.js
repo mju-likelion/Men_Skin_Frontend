@@ -1,10 +1,10 @@
 import React from "react";
 
-import RecommendPresenter from "./RecommendPresenter";
+import BoardPresenter from "./BoardPresenter";
 
 export default class extends React.Component {
 
   render() {
-    return <RecommendPresenter />;
+    return <BoardPresenter />;
   }
 }

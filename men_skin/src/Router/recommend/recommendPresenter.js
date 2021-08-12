@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
-
 const Base = styled.body`
   height: 1080px;
   display: flex;
@@ -65,8 +64,8 @@ const TextBox = styled.p`
 
 const ImgBox = styled.img`
   height: 330px;
-  margin-left: 40px;
-  margin-top: 30px;
+  padding-left: 40px;
+  padding-top: 30px;
   display: block;
   position:absolute;
 
@@ -95,7 +94,7 @@ const ProductBottom2 = styled.div`
   position: relative;
   width: 1807px;
   height: 76px;
-  margin-top:2790px;
+  margin-top:4470px;
 `;
 
 
@@ -112,32 +111,42 @@ function Page({ value, price, img }) {
   );
 }
 
-function recommendPresenter() {
+function RecommendPresenter() {
   return (<Base>
     <Link to="./">
       <Logo src="img/logo.png" />
     </Link>
     <TopBar>
       <Placing>
-        <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>Home </Link> {'>'} Sun Care
+        <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>Home </Link> {'>'} Men's Pick
       </Placing>
     </TopBar>
     <ProductBase>
       <Page value="닥터지 <그린 마일드 업 선 플러스 35ml >" price="13,900원" img="img/sun1.png" />
       <Page value="라운드랩 <자작나무 수분 선크림 50ml>" price="17,500원" img="img/sun2.png" />
       <Page value="AHC <세이프온 라이트 선세럼 40ml>" price="20,800원" img="img/sun3.png" />
-      <Page value="설화수 <상백크림 상백선크림 50ml>" price="76,500원" img="img/sun4.png" />
-      <Page value="아네사선크림 <시세이도썬크림 UV선60ml>" price="23,990원" img="img/sun5.png" />
-      <Page value="아이오페 <UV쉴드 선 프로텍터 60ml>" price="16,000원" img="img/sun6.png" />
-      <Page value="키엘 <울트라 라이트 데일리 UV 디펜스 썬스크린 60ml>" price="35,980원" img="img/sun7.png" />
-      <Page value="애터미 <선크림 SPF 50+>" price="7,900원" img="img/sun8.png" />
-      <Page value="니베아 <프로텍트 앤 라이트 필 퍼펙트 선 세럼 90ml>" price="7,900원" img="img/sun9.png" />
-      <Page value="헤라 <선메이트프로텍터SPF50+PA+++50ml>" price="32,300원" img="img/sun10.png" />
-      <Page value="닥터지 <브라이트닝 업 선 플러스 50ml>" price="10,170원" img="img/sun11.png" />
-      <Page value="메이크프렘 <유브이 디펜스 미 블루 레이 선 플루이드 200ml>" price="59,900" img="img/sun12.png" />
+      <Page value="포맨트 <시그니처 퍼퓸>" price="39,000원" img="img/perfume_1.png" />
+      <Page value="더블유드레스룸 &nbsp;&nbsp;<드레스 퍼퓸 - 70ml>" price="4,900원" img="img/perfume_2.png" />
+      <Page value="에이 노멀 <노멀 퍼퓸>" price="8,900원" img="img/perfume_3.png" />
+      <Page value="포르맨즈 <슈퍼 커버스틱 비비크림 파운데이션>" price="9,900원" img="img/cosmetic_1.jpg" />
+      <Page value="오디너리 <파운데이션 & 프라이머>" price="32,000원" img="img/cosmetic_2.jpg" />
+      <Page value="엔모먼트 <올인원 남자 비비크림>" price="28,900원" img="img/cosmetic_3.png" />
+      <Page value="닥터지 <그린 마일드 업 선 플러스 35ml >" price="13,900원" img="img/sun1.png" />
+      <Page value="라운드랩 <자작나무 수분 선크림 50ml>" price="17,500원" img="img/sun2.png" />
+      <Page value="AHC <세이프온 라이트 선세럼 40ml>" price="20,800원" img="img/sun3.png" />
+
       <Page value="톤28 <자외선 차단거리 유기농 논나노 순한 무기자차 선크림 45g>" price="38,200원" img="img/sun13.png" />
       <Page value="바나나보트 <선크림 118ml(SPF100)>" price="20,930원" img="img/sun14.png" />
       <Page value="듀이셀 <필터링 크림 40ml>" price="28,000원" img="img/sun15.png" />
+      <Page value="더블유드레스룸 <드레스 퍼퓸 - 150ml>" price="7,900원" img="img/perfume_4.png" />
+      <Page value="레르드사봉 <이노센트 타임 50ml>" price="17,000" img="img/perfume_5.png" />
+      <Page value="레르드사봉 <이터널 모먼트 50ml>" price="18,000" img="img/perfume_6.png" />
+      <Page value="포르맨즈 <슈퍼 커버스틱 비비크림 파운데이션>" price="9,900원" img="img/cosmetic_1.jpg" />
+      <Page value="오디너리 <파운데이션 & 프라이머>" price="32,000원" img="img/cosmetic_2.jpg" />
+      <Page value="엔모먼트 <올인원 남자 비비크림>" price="28,900원" img="img/cosmetic_3.png" />
+      <Page value="설화수 <상백크림 상백선크림 50ml>" price="76,500원" img="img/sun4.png" />
+      <Page value="아네사선크림 <시세이도썬크림 UV선60ml>" price="23,990원" img="img/sun5.png" />
+      <Page value="아이오페 <UV쉴드 선 프로텍터 60ml>" price="16,000원" img="img/sun6.png" />
       <ProductBottom2 />
     </ProductBase>
     <ProductBottom1 />
@@ -145,4 +154,4 @@ function recommendPresenter() {
   );
 }
 
-export default recommendPresenter;
+export default RecommendPresenter;

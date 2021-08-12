@@ -10,9 +10,11 @@ import TotalCosmetic from "../Router/TotalCosmetic";
 import TotalPerfume from "../Router/TotalPerfume";
 import TotalSkin from "../Router/TotalSkin";
 import TotalSun from "../Router/TotalSun";
-import recommend from "../Router/recommend";
+import Recommend from "../Router/Recommend";
 import Find from "../Router/Find";
 import Content from "../Router/Content"
+import Board from "../Router/Board";
+import Write from "../Router/Write";
 
 
 export default () => (
@@ -28,8 +30,10 @@ export default () => (
       <Route path="/TotalCosmetic" exact component={TotalCosmetic} />
       <Route path="/TotalSkin" exact component={TotalSkin} />
       <Route path="/TotalSun" exact component={TotalSun} />
-      <Route path="/recommend" exact component={recommend} />
+      <Route path="/Recommend" exact component={Recommend} />
       <Route path="/Content" exact component={Content} />
+      <Route path="/Board" exact component={Board} />
+      <Route path="/Write" exact component={Write} />
 
     </Switch>
   </Router>

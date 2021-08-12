@@ -119,7 +119,7 @@ function TotalSkinPresenter() {
     </Link>
     <TopBar>
       <Placing>
-        <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>Home </Link> {'>'} Sun Care
+        <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>Home </Link> {'>'} Skin Care
       </Placing>
     </TopBar>
     <ProductBase>

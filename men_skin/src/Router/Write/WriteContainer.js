@@ -1,10 +1,10 @@
 import React from "react";
 
-import RecommendPresenter from "./RecommendPresenter";
+import WritePresenter from "./WritePresenter";
 
 export default class extends React.Component {
 
   render() {
-    return <RecommendPresenter />;
+    return <WritePresenter />;
   }
 }
