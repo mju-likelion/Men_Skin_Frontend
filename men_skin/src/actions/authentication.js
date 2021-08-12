@@ -4,7 +4,11 @@ import {
   AUTH_LOGIN,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
+<<<<<<< HEAD
 } from "/ActionsTypes";
+=======
+} from "./ActionsTypes";
+>>>>>>> ad844f9e325297a5b9a79f22769f5f2e0e1daffb
 //thunk
 
 const serverURL = process.env.REACT_APP_API_URL;
