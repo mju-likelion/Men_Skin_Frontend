@@ -1,6 +1,6 @@
 import LoginContainer from "./LoginContainer";
 import { connect } from "react-redux";
-import { loginRequest } from "../actions/authentication";
+import { loginRequest } from "../../actions/authentication";
 const mapStateToProps = (state) => {
   return {
     status: state.authentication.login.status,

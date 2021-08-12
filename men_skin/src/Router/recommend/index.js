@@ -1,3 +1,3 @@
-import RecommendContainer from "./RecommendContainer";
+import recommendContainer from "./recommendContainer";
 
-export default RecommendContainer;
+export default recommendContainer;

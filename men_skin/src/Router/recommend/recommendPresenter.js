@@ -111,7 +111,7 @@ function Page({ value, price, img }) {
   );
 }
 
-function RecommendPresenter() {
+function recommendPresenter() {
   return (<Base>
     <Link to="./">
       <Logo src="img/logo.png" />
@@ -154,4 +154,4 @@ function RecommendPresenter() {
   );
 }
 
-export default RecommendPresenter;
+export default recommendPresenter;

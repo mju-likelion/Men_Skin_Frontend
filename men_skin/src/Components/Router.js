@@ -10,7 +10,7 @@ import TotalCosmetic from "../Router/TotalCosmetic";
 import TotalPerfume from "../Router/TotalPerfume";
 import TotalSkin from "../Router/TotalSkin";
 import TotalSun from "../Router/TotalSun";
-import Recommend from "../Router/Recommend";
+import Recommend from "../Router/recommend";
 import Find from "../Router/Find";
 import Content from "../Router/Content"
 import Board from "../Router/Board";
