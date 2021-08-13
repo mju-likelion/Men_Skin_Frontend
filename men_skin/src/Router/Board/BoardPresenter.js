@@ -31,7 +31,7 @@ const TitleDiv = styled.div`
   width: 819px;
   height: 53px;
   left: 560px;
-  top: 240px;
+  top: 230px;
   font-family: Peddana;
   font-style: normal;
   font-weight: normal;
@@ -45,7 +45,7 @@ const TitleDiv = styled.div`
 const DivText = styled.p`
   position: absolute;
   width: 988px;
-  height: 48px;
+  height: 12px;
   left: 620px;
   top: 320px;
 
@@ -126,7 +126,7 @@ const NumberBox = styled.div`
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
-  line-height: 12px;
+  line-height: 12px; 
   /* identical to box height */
 
   text-align: center;
@@ -154,7 +154,7 @@ const Pencil = styled.img`
   position: absolute;
 `;
 
-const div1 = styled.div`
+const div2 = styled.div` 
   border: 1px solid;
   width: 100px;
   height: 50px;
@@ -162,26 +162,25 @@ const div1 = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
-const clicked = styled.div`
-  color: black;
+const clicked = styled.event`
+  color: gold;
 `;
 
-var div2 = document.getElementsByClassName(div1);
+var div3 = document.getElementsByClassName('div2');
 
 function handleClick(event) {
   console.log(event.target);
 
   console.log(event.target.classList);
 
-  if (event.target.classList[1] === clicked) {
-    event.target.classList.remove(clicked);
+  if (event.target.classList[1] === 'clicked') {
+    event.target.classList.remove('clicked');
   } else {
     for (var i = 0; i < div2.length; i++) {
-      div2[i].classList.remove(clicked);
+      div2[i].classList.remove('clicked');
     }
 
-    event.target.classList.add(clicked);
+    event.target.classList.add('clicked');
   }
 }
 
@@ -199,7 +198,7 @@ function BoardPresenter() {
       <Logo src="img/logo.png" />
     </Link>
     <Line />
-    <TitleDiv><div2>건성</div2>&nbsp; 지성&nbsp; 복합성&nbsp; 헤어/뷰티&nbsp; 스타일&nbsp; ↓↑&nbsp; 조회순 </TitleDiv>
+    <TitleDiv><div2>건성</div2>&nbsp; <div2>지성</div2>&nbsp; <div2>복합성</div2>&nbsp; <div2>헤어/뷰티</div2>&nbsp; <div2>스타일</div2>&nbsp; <div2>↓↑</div2>&nbsp; <div2>조회순</div2> </TitleDiv>
     <div>
       <Link to="./content">
         <DivText style={{ top: 300 }}>제발 화장품은 사서 바르세요!</DivText>

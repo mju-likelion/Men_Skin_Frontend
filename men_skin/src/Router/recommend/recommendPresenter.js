@@ -111,6 +111,19 @@ function Page({ value, price, img }) {
   );
 }
 
+function Page1({ value, price, img }) {
+  return (
+    <div>
+      <ProductDetail>
+        <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>
+          <ImgBox src={img} style={{marginLeft:27}}/>
+          <TextBox><br /><br />{value}<br /><br />{price}</TextBox>
+        </Link>
+      </ProductDetail>
+    </div >
+  );
+}
+
 function recommendPresenter() {
   return (<Base>
     <Link to="./">
@@ -125,9 +138,9 @@ function recommendPresenter() {
       <Page value="닥터지 <그린 마일드 업 선 플러스 35ml >" price="13,900원" img="img/sun1.png" />
       <Page value="라운드랩 <자작나무 수분 선크림 50ml>" price="17,500원" img="img/sun2.png" />
       <Page value="AHC <세이프온 라이트 선세럼 40ml>" price="20,800원" img="img/sun3.png" />
-      <Page value="포맨트 <시그니처 퍼퓸>" price="39,000원" img="img/perfume_1.png" />
-      <Page value="더블유드레스룸 &nbsp;&nbsp;<드레스 퍼퓸 - 70ml>" price="4,900원" img="img/perfume_2.png" />
-      <Page value="에이 노멀 <노멀 퍼퓸>" price="8,900원" img="img/perfume_3.png" />
+      <Page1 value="포맨트 <시그니처 퍼퓸>" price="39,000원" img="img/perfume_1.png" />
+      <Page1 value="더블유드레스룸 &nbsp;&nbsp;<드레스 퍼퓸 - 70ml>" price="4,900원" img="img/perfume_2.png" />
+      <Page1 value="에이 노멀 <노멀 퍼퓸>" price="8,900원" img="img/perfume_3.png" />
       <Page value="포르맨즈 <슈퍼 커버스틱 비비크림 파운데이션>" price="9,900원" img="img/cosmetic_1.jpg" />
       <Page value="오디너리 <파운데이션 & 프라이머>" price="32,000원" img="img/cosmetic_2.jpg" />
       <Page value="엔모먼트 <올인원 남자 비비크림>" price="28,900원" img="img/cosmetic_3.png" />
@@ -138,9 +151,9 @@ function recommendPresenter() {
       <Page value="톤28 <자외선 차단거리 유기농 논나노 순한 무기자차 선크림 45g>" price="38,200원" img="img/sun13.png" />
       <Page value="바나나보트 <선크림 118ml(SPF100)>" price="20,930원" img="img/sun14.png" />
       <Page value="듀이셀 <필터링 크림 40ml>" price="28,000원" img="img/sun15.png" />
-      <Page value="더블유드레스룸 <드레스 퍼퓸 - 150ml>" price="7,900원" img="img/perfume_4.png" />
-      <Page value="레르드사봉 <이노센트 타임 50ml>" price="17,000" img="img/perfume_5.png" />
-      <Page value="레르드사봉 <이터널 모먼트 50ml>" price="18,000" img="img/perfume_6.png" />
+      <Page1 value="더블유드레스룸 <드레스 퍼퓸 - 150ml>" price="7,900원" img="img/perfume_4.png" />
+      <Page1 value="레르드사봉 <이노센트 타임 50ml>" price="17,000" img="img/perfume_5.png" />
+      <Page1 value="레르드사봉 <이터널 모먼트 50ml>" price="18,000" img="img/perfume_6.png" />
       <Page value="포르맨즈 <슈퍼 커버스틱 비비크림 파운데이션>" price="9,900원" img="img/cosmetic_1.jpg" />
       <Page value="오디너리 <파운데이션 & 프라이머>" price="32,000원" img="img/cosmetic_2.jpg" />
       <Page value="엔모먼트 <올인원 남자 비비크림>" price="28,900원" img="img/cosmetic_3.png" />
