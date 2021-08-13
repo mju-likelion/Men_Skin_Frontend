@@ -78,7 +78,7 @@ const Placing = styled.span`
   font-weight: normal;
   font-size: 24px;
   line-height: 65px;
-  height: 68px;
+  height: 68px; 
   position: absolute;
   margin-left:10px; 
 `;
@@ -103,10 +103,8 @@ function Page({ value, price, img }) {
   return (
     <div>
       <ProductDetail>
-        <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>
-          <ImgBox src={img} />
-          <TextBox><br /><br />{value}<br /><br />{price}</TextBox>
-        </Link>
+        <ImgBox src={img} />
+        <TextBox><br /><br />{value}<br /><br />{price}</TextBox>
       </ProductDetail>
     </div >
   );
@@ -123,19 +121,23 @@ function TotalSkinPresenter() {
       </Placing>
     </TopBar>
     <ProductBase>
-      <Page value="이니스프리 <포레스트 포맨 프레시 스킨케어 2종 세트>" price="24,030원" img="img/skin1.jpg" />
-      <Page value="헤라 <헤라옴므 스폐셜 2종 기획세트 / 남성 스킨케어 기초>" price="43,180원" img="img/skin2.jpg" />
-      <Page value="니베아 포맨 <스킨케어 3종 세트>" price="33,200원" img="img/skin3.jpg" />
-      <Page value="헤라 <헤라옴므 베이직 스폐셜 2종 세트>" price="11,610원" img="img/skin4.jpg" />
+      <a href="http://itempage3.auction.co.kr/DetailView.aspx?ItemNo=A529520121&frm3=V2" style={{ textDecoration: 'none', color: 'black' }} target='_blank'>
+        <Page value="니베아 포맨 <스킨케어 2종세트>" price="12,070원" img="img/skin11.jpg" />
+      </a>
+      <a href="http://www.11st.co.kr/products/59009279" style={{ textDecoration: 'none', color: 'black' }} target='_blank'>
+        <Page value="헤라 <헤라옴므 스폐셜 2종 기획세트 / 남성 스킨케어 기초>" price="43,180원" img="img/skin2.jpg" />
+      </a>
+      <Page value="헤라 <헤라옴므 스킨케어 3종 세트>" price="33,200원" img="img/skin3.jpg" />
+      <Page value="니베아 포맨 <베이직 스폐셜 3종 세트>" price="11,610원" img="img/skin4.jpg" />
       <Page value="레노마옴므 <리프레싱 대용량 남성 스킨케어세트(스킨 + 로션)>" price="41,000원" img="img/skin5.png" />
       <Page value="프리메라 <맨 오가니언스 2종 남성 스킨케어 기획세트>" price="51,000원" img="img/skin6.jpg" />
       <Page value="바르테라 <남성 스킨케어 3종>" price="17,000원" img="img/skin7.jpg" />
       <Page value="28레미디 <남자 아크네 스킨케어 세럼 3종세트>" price="75,000원" img="img/skin8.png" />
       <Page value="니베아 포맨 <스킨케어 2종 (스킨+로션)>" price="12,090원" img="img/skin9.jpg" />
       <Page value="SNP  <타임리스 블랙 옴므 스킨케어 2종 세트>" price="41,450원" img="img/skin10.jpg" />
-      <Page value="아리아니 <카르텔 남성 스킨케어 2종세트 카르텔옴므>" price="12,070원" img="img/skin11.jpg" />
+      <Page value="이니스프리 <포레스트 포맨 프레시 스킨케어 2종 세트>" price="24,030원" img="img/skin1.jpg" />
       <Page value="애터미 <남자기초 옴므 스킨 케어 3종 세트>" price="11,500원" img="img/skin12.jpg" />
-      <Page value="니베아 포맨 <스킨케어 2종세트>" price="13,670원" img="img/skin13.jpg" />
+      <Page value="니베아 포맨 <카르텔 남성 스킨케어 2종세트 카르텔옴므>" price="13,670원" img="img/skin13.jpg" />
       <Page value="꽃을든남자 <엠파워 스킨케어 2종 세트>" price="23,800원" img="img/skin14.png" />
       <Page value="비버리힐즈폴로클럽 <프라임옴므 스킨케어 2종세트>" price="21,990원" img="img/skin15.jpg" />
       <ProductBottom2 />

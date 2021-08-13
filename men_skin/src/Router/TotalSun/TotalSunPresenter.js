@@ -103,10 +103,8 @@ function Page({ value, price, img }) {
   return (
     <div>
       <ProductDetail>
-        <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>
-          <ImgBox src={img} />
-          <TextBox><br /><br />{value}<br /><br />{price}</TextBox>
-        </Link>
+        <ImgBox src={img} />
+        <TextBox><br /><br />{value}<br /><br />{price}</TextBox>
       </ProductDetail>
     </div >
   );
@@ -123,8 +121,12 @@ function TotalSunPresenter() {
       </Placing>
     </TopBar>
     <ProductBase>
-      <Page value="닥터지 <그린 마일드 업 선 플러스 35ml >" price="13,900원" img="img/sun1.png" />
-      <Page value="라운드랩 <자작나무 수분 선크림 50ml>" price="17,500원" img="img/sun2.png" />
+      <a href="https://brand.naver.com/dr-g/products/4929685234?n_media=27758&n_query=%EB%8B%A5%ED%84%B0%EC%A7%80%EA%B7%B8%EB%A6%B0%EB%A7%88%EC%9D%BC%EB%93%9C%EC%97%85%EC%84%A0%ED%94%8C%EB%9F%AC%EC%8A%A4&n_rank=1&n_ad_group=grp-a001-02-000000021599339&n_ad=nad-a001-02-000000136514262&n_campaign_type=2&n_mall_id=gwsscosemtic&n_mall_pid=4929685234&n_ad_group_type=2&NaPm=ct%3Dksaaqgqo%7Cci%3D0ze00018lvnvqp8ZnvkS%7Ctr%3Dpla%7Chk%3Da206df66e3dcf5a24bfe747ccfcd2ae09aab0ba9" style={{ textDecoration: 'none', color: 'black' }} target='_blank'>
+        <Page value="닥터지 <그린 마일드 업 선 플러스 35ml >" price="13,900원" img="img/sun1.png" />
+      </a>
+      <a href="https://brand.naver.com/roundlab/products/4886102737?NaPm=ct%3Dksaat0k8%7Cci%3D085d07b84a7f8ecdb3e5187821eccf38c901950f%7Ctr%3Dsls%7Csn%3D401069%7Chk%3D3a19a98e0ae3cf1cebc142770fd3b2903342c005" style={{ textDecoration: 'none', color: 'black' }} target='_blank'>
+        <Page value="라운드랩 <자작나무 수분 선크림 50ml>" price="17,500원" img="img/sun2.png" />
+      </a>
       <Page value="AHC <세이프온 라이트 선세럼 40ml>" price="20,800원" img="img/sun3.png" />
       <Page value="설화수 <상백크림 상백선크림 50ml>" price="76,500원" img="img/sun4.png" />
       <Page value="아네사선크림 <시세이도썬크림 UV선60ml>" price="23,990원" img="img/sun5.png" />
