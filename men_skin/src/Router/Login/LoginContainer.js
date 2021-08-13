@@ -7,14 +7,14 @@ export default class extends React.Component {
     super(props, context);
     // this.LoginBtnClick = this.LoginBtnClick.bind(this);
     this.state = {
-      id: "",
+      email: "",
       password: "",
       disabled: true,
     };
   }
 
   LoginBtnActive = () => {
-    if (this.state.id !== "" && this.state.password !== "") {
+    if (this.state.email !== "" && this.state.password !== "") {
       this.setState({ disabled: false });
     } else {
       this.setState({ disabled: true });
@@ -34,7 +34,7 @@ export default class extends React.Component {
     if (this.props.location.props) {
       this.setState(
         {
-          id: this.props.location.props.id,
+          email: this.props.location.props.email,
           password: this.props.location.props.password,
         },
         () => {
@@ -45,7 +45,7 @@ export default class extends React.Component {
   }
   LoginBtnClick = () => {
     return this.props
-      .loginRequest(this.state.id, this.state.password)
+      .loginRequest(this.state.email, this.state.password)
       .then(() => {
         // console.log(this.props);
         if (this.props.status === "SUCCESS") {
@@ -60,10 +60,10 @@ export default class extends React.Component {
   };
 
   render() {
-    const { id, password, disabled } = this.state;
+    const { email, password, disabled } = this.state;
     return (
       <LoginPresenter
-        id={id}
+        email={email}
         password={password}
         disabled={disabled}
         LoginBtnClick={this.LoginBtnClick}

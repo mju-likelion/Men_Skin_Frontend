@@ -161,7 +161,7 @@ const Inputdiv_age = styled.div`
   top: 650px;
 `;
 
-const Submit = styled.div`
+const Submit = styled.button`
   position: absolute;
   width: 300px;
   height: 50px;
@@ -178,7 +178,7 @@ const Submit = styled.div`
 `;
 
 
-const SingupPresenter = () => (
+const SingupPresenter = (props) => (
   <Section>
     <Link to="./">
       <BigLogo src="img/BigLogo.png" />
@@ -195,7 +195,7 @@ const SingupPresenter = () => (
       <MyInput
         // id="cr_user_id"
         // value={cr_id}
-        // onChange={cr_onChangeId}
+        // onChange={(e) => props.SetEmail(e)} 
         placeholder="<UserID>@OOO.com"
       // required
       />
@@ -205,7 +205,7 @@ const SingupPresenter = () => (
       <MyInput
         // id="cr_pass_word"
         // value={cr_pwd}
-        // onChange={cr_onChangePwd}
+        // onChange={(e) => props.SetPw(e)} 
         placeholder="사용하실 비밀번호를 입력해주세요"
       // required
       />
@@ -215,14 +215,14 @@ const SingupPresenter = () => (
       <MyInput
         // id="nickname"
         // value={nne}
-        // onChange={onChangeNne}
+        // onChange={(e) => props.SetUsername(e)} 
         placeholder="사용하실 닉네임을 입력해주세요"
       // required
       />
     </Inputdiv_nickname>
     <SkinType className="Sing_up">
       sda
-      <Select>
+      <Select  >
         <option value="" hidden>
           피부타입을 설정하세요
         </option>
@@ -237,12 +237,12 @@ const SingupPresenter = () => (
     <MyInput
         // id="nickname"
         // value={nne}
-        // onChange={onChangeNne}
-        placeholder="탄생년도를 적어주세요 ex) 1997"
+        // onChange={(e) => props.SetAge(e)}
+        placeholder="탄생년도를 적어주세요 ex)1998년2월24일 → 19980224"
       // required
       />
     </Inputdiv_age>
-    <Submit>회원가입하기</Submit>
+    <Submit >회원가입하기</Submit>
 
   </Section>
 

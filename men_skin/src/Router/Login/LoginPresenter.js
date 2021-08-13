@@ -20,7 +20,6 @@ const BigLogo = styled.img`
     left: 111px;
     top: 210px;
 `;
-
 const Line = styled.div`
 position: absolute;
 width: 9px;
@@ -29,7 +28,6 @@ left: 825px;
 top: 100px;
 background: #FFFFFF;
 `;
-
 const Box = styled.div`
 position: absolute;
 width: 602px;
@@ -158,7 +156,7 @@ const LoginPresenter = (props) => (
             <MyInput 
                 // id="user_id"
                 // value={id}
-                // onChange={onChangeId}
+                // onChange={props.SetId}
                 placeholder="<UserID>@OOO.com"
                 // required
               />
@@ -168,12 +166,12 @@ const LoginPresenter = (props) => (
             <MyInput type="password"
                 // id="pass_word"
                 // value={pwd}
-                // onChange={onChangePwd}
+                // onChange={props.SetPw}
                 placeholder="비밀번호를 입력해주세요"
                 // required
             />
             </InputDiv_pass>
-            <Loginbutton>로그인</Loginbutton>
+            <Loginbutton disabled={props.disabled}>로그인</Loginbutton>
             
 
             

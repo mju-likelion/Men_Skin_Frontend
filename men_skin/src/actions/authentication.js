@@ -10,26 +10,25 @@ import {
 } from "./ActionsTypes";
 
 
-const serverURL = process.env.REACT_APP_API_URL;
 
-export function registerRequest(id, password, birth, email, zip, address) {
+
+export function registerRequest(email,password, username, age, skin_type ) {
   return (dispatch) => {
     // Inform Register API is starting
     dispatch(register());
     return axios
-      .post(serverURL + "api/users/register", {
-        id: id,
-        password: password,
-        dateOfBirth: birth,
+      .post("https://mens-skin.herokuapp.com/user/signup/", {
         email: email,
-        // zip,
-        address: address,
+        password: password,
+        username: username,
+        age: age,
+        skin_type: skin_type,
       })
       .then((response) => {
         if (response.status === 200) {
           // SUCCEEDc
           // console.log(response.data);
-          dispatch(registerSuccess(id));
+          dispatch(registerSuccess(email));
         } else {
           // FAILED
           dispatch(registerFailure());
@@ -40,7 +39,7 @@ export function registerRequest(id, password, birth, email, zip, address) {
       });
   };
 }
-export function loginRequest(id, password) {
+export function loginRequest(email, password) {
   return (dispatch) => {
     // Inform Login API is starting
     dispatch(login());
@@ -50,12 +49,12 @@ export function loginRequest(id, password) {
     return (
       axios
         // .post("http://localhost:5000/api/users/login", { id, password })
-        .post(serverURL + "api/users/login", { id, password })
+        .post("https://mens-skin.herokuapp.com/user/signup/", { email, password })
         .then((response) => {
           if (response.status === 200) {
             // SUCCEED
             localStorage.setItem("token", response.data.token);
-            dispatch(loginSuccess(id));
+            dispatch(loginSuccess(email));
           } else {
             // FAILED
             // console.log("fail");
