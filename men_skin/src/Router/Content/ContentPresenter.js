@@ -213,27 +213,27 @@ const ContentPresenter = () => (
       <img src="img/clock.png" />
     </Clock>
     <ClockP>
-      2021.07.23 15:28
+      2021.07.26 11:07
     </ClockP>
 
     <LookUP>
       <img src="img/eye.png" />
     </LookUP>
     <LookUPP>
-      13
+      32
     </LookUPP>
 
     <Comment>
       <img src="img/comment.png" />
     </Comment>
     <CommentP>
-      24
+      1
     </CommentP>
-    <div style={{ marginTop: 530, marginLeft: 600 }} /> 
+    <div style={{ marginTop: 530, marginLeft: 600 }} />
     <Content>우리집 고양이 츄르를 좋아해 우리집 우리집 고양이 츄르를 좋아해 우리집 고양이 츄르를 좋아해 우리집 고양이 츄르를 좋아해 우리집 고양이 츄르를 좋아해 우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해우리집 고양이 츄르를 좋아해 그래서 우리집 고양이 돼지야 🐷</Content>
 
     <img style={{ marginLeft: 455 }} src="img/Coment_Line.png" />
-    <Coment_p style={{ marginLeft: 455 }}>댓글 20</Coment_p>
+    <Coment_p style={{ marginLeft: 455 }}>댓글 1</Coment_p>
     <div style={{ marginTop: 10, marginLeft: 455 }}>
       <MyInput
         // id="pass_word"
@@ -247,11 +247,11 @@ const ContentPresenter = () => (
 
     {/* 댓글의 id가 0이 될때까지 반복반복반복! */}
     <Coment_p style={{ marginLeft: 455 }}>김엽떡</Coment_p>
-    <Coment_p style={{ marginLeft: 455, fontSize:18 }}>엽떡A세트에 치츠추가 해주세요!!</Coment_p>
+    <Coment_p style={{ marginLeft: 455, fontSize: 18 }}>엽떡A세트에 치츠추가 해주세요!!</Coment_p>
     <img style={{ marginLeft: 455, marginBottom: 20 }} src="img/Coment_Line.png" />
 
 
-    
+
 
 
 

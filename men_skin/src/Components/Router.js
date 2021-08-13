@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Redirect,Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 
 import Home from "../Router/Home";
 
@@ -14,6 +14,7 @@ import Recommend from "../Router/recommend";
 import Find from "../Router/Find";
 import Content from "../Router/Content"
 import Board from "../Router/Board";
+import Board2 from "../Router/Board2";
 import Write from "../Router/Write";
 
 
@@ -33,6 +34,7 @@ export default () => (
       <Route path="/Recommend" exact component={Recommend} />
       <Route path="/Content" exact component={Content} />
       <Route path="/Board" exact component={Board} />
+      <Route path="/Board2" exact component={Board2} />
       <Route path="/Write" exact component={Write} />
       <Redirect from="*" to="/" />
 

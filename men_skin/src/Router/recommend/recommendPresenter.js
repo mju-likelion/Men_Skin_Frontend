@@ -102,10 +102,8 @@ function Page({ value, price, img }) {
   return (
     <div>
       <ProductDetail>
-        <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>
-          <ImgBox src={img} />
-          <TextBox><br /><br />{value}<br /><br />{price}</TextBox>
-        </Link>
+        <ImgBox src={img} />
+        <TextBox><br /><br />{value}<br /><br />{price}</TextBox>
       </ProductDetail>
     </div >
   );
@@ -115,10 +113,8 @@ function Page1({ value, price, img }) {
   return (
     <div>
       <ProductDetail>
-        <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>
-          <ImgBox src={img} style={{marginLeft:27}}/>
-          <TextBox><br /><br />{value}<br /><br />{price}</TextBox>
-        </Link>
+        <ImgBox src={img} style={{ marginLeft: 27 }} />
+        <TextBox><br /><br />{value}<br /><br />{price}</TextBox>
       </ProductDetail>
     </div >
   );
@@ -135,10 +131,16 @@ function recommendPresenter() {
       </Placing>
     </TopBar>
     <ProductBase>
-      <Page value="닥터지 <그린 마일드 업 선 플러스 35ml >" price="13,900원" img="img/sun1.png" />
-      <Page value="라운드랩 <자작나무 수분 선크림 50ml>" price="17,500원" img="img/sun2.png" />
+      <a href="https://brand.naver.com/dr-g/products/4929685234?n_media=27758&n_query=%EB%8B%A5%ED%84%B0%EC%A7%80%EA%B7%B8%EB%A6%B0%EB%A7%88%EC%9D%BC%EB%93%9C%EC%97%85%EC%84%A0%ED%94%8C%EB%9F%AC%EC%8A%A4&n_rank=1&n_ad_group=grp-a001-02-000000021599339&n_ad=nad-a001-02-000000136514262&n_campaign_type=2&n_mall_id=gwsscosemtic&n_mall_pid=4929685234&n_ad_group_type=2&NaPm=ct%3Dksaaqgqo%7Cci%3D0ze00018lvnvqp8ZnvkS%7Ctr%3Dpla%7Chk%3Da206df66e3dcf5a24bfe747ccfcd2ae09aab0ba9" style={{ textDecoration: 'none', color: 'black' }} target='_blank'>
+        <Page value="닥터지 <그린 마일드 업 선 플러스 35ml >" price="13,900원" img="img/sun1.png" />
+      </a>
+      <a href="https://brand.naver.com/roundlab/products/4886102737?NaPm=ct%3Dksaat0k8%7Cci%3D085d07b84a7f8ecdb3e5187821eccf38c901950f%7Ctr%3Dsls%7Csn%3D401069%7Chk%3D3a19a98e0ae3cf1cebc142770fd3b2903342c005" style={{ textDecoration: 'none', color: 'black' }} target='_blank'>
+        <Page value="라운드랩 <자작나무 수분 선크림 50ml>" price="17,500원" img="img/sun2.png" />
+      </a>
       <Page value="AHC <세이프온 라이트 선세럼 40ml>" price="20,800원" img="img/sun3.png" />
-      <Page1 value="포맨트 <시그니처 퍼퓸>" price="39,000원" img="img/perfume_1.png" />
+      <a href="https://theforment.com/product/%ED%8F%AC%EB%A7%A8%ED%8A%B8-%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98-%ED%8D%BC%ED%93%B8/51/" style={{ textDecoration: 'none', color: 'black' }} target='_blank'>
+        <Page1 value="포맨트 <시그니처 퍼퓸>" price="39,000원" img="img/perfume_1.png" />
+      </a>
       <Page1 value="더블유드레스룸 &nbsp;&nbsp;<드레스 퍼퓸 - 70ml>" price="4,900원" img="img/perfume_2.png" />
       <Page1 value="에이 노멀 <노멀 퍼퓸>" price="8,900원" img="img/perfume_3.png" />
       <Page value="포르맨즈 <슈퍼 커버스틱 비비크림 파운데이션>" price="9,900원" img="img/cosmetic_1.jpg" />
