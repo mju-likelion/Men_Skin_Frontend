@@ -31,7 +31,7 @@ const MainText = styled.p`
   position: absolute;
   width: 200px;
   height: 47px;
-  left: 386px;
+  left: 350px;
   top: 268px;
   font-family: Roboto;
   font-style: normal;
@@ -42,26 +42,12 @@ const MainText = styled.p`
 
 `;
 
-const TitleInput = styled.input`
-  font-size: 20px;
-  width: 1036px;
-  height: 51px;
-  left: 520px;
-  top: 800px;
-  background: white;
-  border-radius: 20px;
-  align: right;
-
-  
-  &:focus {
-  outline: none;
-`;
 
 const InputDiv = styled.input`
   font-size: 20px;
   width: 1036px;
   height: 51px;
-  left: 520px;
+  left: 500px;
   top: 800px;
   background: white;
   border-radius: 20px;
@@ -85,7 +71,7 @@ const Submit = styled.button`
   position: absolute;
   width: 320px;
   height: 58px;
-  left: 838px;
+  left: 800px;
   top: 990px;
 
   background: #FFFFFF;
@@ -98,10 +84,10 @@ function WritePresenter() {
       <Logo src="img/logo.png" />
     </Link>
     <Line />
-    <MainText>게시글 작성</MainText>
-    <InputDiv placeholder="제목을 입력해주세요" style={{ marginLeft: 460, marginTop: 381, width: 1036 }}></InputDiv>
+    <MainText >게시글 작성</MainText>
+    <InputDiv placeholder="제목을 입력해주세요" style={{ marginLeft: 420, marginTop: 381, width: 1036 }}></InputDiv>
     <MainText style={{ width: 76, top: 360 }}>제목</MainText>
-    <ContentDiv placeholder="제목을 입력해주세요" style={{ marginLeft: 460, width: 1036, height: 412 }} ></ContentDiv>
+    <ContentDiv placeholder="제목을 입력해주세요" style={{ marginLeft: 420, width: 1036, height: 412 }} ></ContentDiv>
     <MainText style={{ width: 76, top: 495 }}>내용</MainText>
     <Submit>등록하기</Submit>
   </Base>
