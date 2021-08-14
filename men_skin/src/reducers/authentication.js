@@ -16,6 +16,12 @@ const initialState = {
   upload: {
     status: "INIT",
   },
+  text: {
+    status: "INIT",
+  },
+  datetime: {
+    status: "INIT",
+  },
   status: {
     valid: false,
     isLoggedIn: false,
@@ -51,7 +57,7 @@ export default function authentication(state = initialState, action) {
           status: "FAILURE",
         },
       };
-    
+
     default:
       return state;
   }

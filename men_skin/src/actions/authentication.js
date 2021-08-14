@@ -6,13 +6,16 @@ import {
   AUTH_LOGIN,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
+  AUTH_POST,
+  AUTH_POST_SUCCESS,
+  AUTH_POST_FAILURE,
 
 } from "./ActionsTypes";
 
 
 
 
-export function registerRequest(email,password, username, age, skin_type ) {
+export function registerRequest(email, password, username, age, skin_type) {
   return (dispatch) => {
     // Inform Register API is starting
     dispatch(register());
@@ -68,6 +71,31 @@ export function loginRequest(email, password) {
   };
 }
 
+export function postRequest(text, datetime) {
+  return (dispatch) => {
+    dispatch(post());
+
+    return (
+      axios
+        .post("https://mens-skin.herokuapp.com/user/signup/", {
+          text: text,
+          datetime: datetime
+        })
+        .then((response) => {
+          if (response.status === 200) {
+            dispatch(registerSuccess(text));
+          } else {
+            // FAILED
+            dispatch(registerFailure());
+          }
+        })
+        .catch((err) => {
+          // console.log(err);
+        })
+    );
+  };
+}
+
 export function register() {
   return {
     type: AUTH_REGISTER,
@@ -88,7 +116,6 @@ export function registerFailure(error) {
 }
 
 
-
 export function login() {
   return {
     type: AUTH_LOGIN,
@@ -106,5 +133,25 @@ export function loginFailure() {
     type: AUTH_LOGIN_FAILURE,
   };
 }
+
+
+export function post() {
+  return {
+    type: AUTH_POST,
+  };
+}
+
+export function postSuccess() {
+  return {
+    type: AUTH_POST_SUCCESS,
+  };
+}
+
+export function postFailure() {
+  return {
+    type: AUTH_POST_FAILURE,
+  };
+}
+
 
 
